@@ -27,9 +27,22 @@
     <i class="fa fa-send"></i>New Task
   </button>
 </div>
-
 <div class="row">
-  <div class="col-md-6 mx-auto">
-    List of Tasks
+  <div class="col-md">
+    <ul class="list-group">
+      <li  *ngFor="let task of tasks"  class="list-group-item d-flex justify-content-between align-items-center">
+        {{ task.label }}
+        <span [ngClass] = "{
+          'badge-info' : task.completed,
+          'badge-danger' : !task.completed
+        }" class="badge badge-secondary badge-pill"   [ngStyle]="{'color':task.completed  ? 'blue' : 'red' }">
+          <i class="fa" [ngClass] = "{
+            'fa-thumbs-up' : task.completed,
+            'fa-thumbs-down' :  !task.completed
+          }" aria-hidden="true"></i>
+
+        </span>
+      </li>
+    </ul>
   </div>
 </div>

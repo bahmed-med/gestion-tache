@@ -19,3 +19,43 @@ link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/cs
 https://www.bootstrapcdn.com/
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 https://cdnjs.com/libraries/font-awesome/4.7.0
+
+
+pour generer un service:
+
+ng g s services/task ( in faut créér les services dans un seul dossier services)
+
+pour comminiquer avec les requete http, il faut importer le module suivant dans le module:
+  import { HttpClientModule } from '@angular/common/http';
+pour gerer les formulaire:
+  import { FormsModule } from '@angular/forms';
+
+et il faut les ajoute dans la clé import
+
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule
+  ],
+
+  il faut injecter dans le service le module http.
+
+  créer une fonction dans le service qui appelle à l'url du Back, comme example:
+
+  findAll(){
+    return this.http.get("http://localhost:5000/tasks");
+  }
+
+  et dans le component du servive, il faut injecter les service dans le constructeur:
+
+  et créer une méthode qui va appeler la fonction dans le service findAll().
+
+  getTasks(){
+    this.taskService.findAll()
+      .subscribe(data => )
+
+  }
+
+  il faut créer un model pour les task:
+
+

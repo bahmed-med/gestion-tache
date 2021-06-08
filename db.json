@@ -8,7 +8,7 @@
     {
       "id": 2,
       "label": "Learn JAVA",
-      "completed": false
+      "completed": true
     }
   ]
 }
