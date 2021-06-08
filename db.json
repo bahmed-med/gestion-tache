@@ -4,11 +4,6 @@
       "id": 1,
       "label": "Learn Angular",
       "completed": false
-    },
-    {
-      "id": 2,
-      "label": "Learn JAVA",
-      "completed": true
     }
   ]
 }

@@ -7,9 +7,16 @@ import { Task } from '../models/tast';
 })
 export class TaskService {
 
+  apiUrl = "http://localhost:5000/tasks";
+
   constructor(private http: HttpClient) { }
 
   findAll(){
-    return this.http.get<Task[]>("http://localhost:5000/tasks");
+    return this.http.get<Task[]>(this.apiUrl);
+  }
+
+
+  delete(id: any){
+    return this.http.delete(`${this.apiUrl}/${id}`);
   }
 }
