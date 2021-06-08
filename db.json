@@ -4,6 +4,21 @@
       "id": 1,
       "label": "Learn Angular",
       "completed": false
+    },
+    {
+      "label": "Learn ANONIS",
+      "completed": false,
+      "id": 2
+    },
+    {
+      "label": "Learn PHP",
+      "completed": true,
+      "id": 3
+    },
+    {
+      "label": "LEARN SYMFONY",
+      "completed": false,
+      "id": 4
     }
   ]
 }

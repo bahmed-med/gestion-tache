@@ -15,6 +15,11 @@ export class TasksComponent implements OnInit {
 
   tasks: Task[] = [];
 
+  myTask: Task = {
+    label: '',
+    completed: false
+  }
+
   constructor(private taskService: TaskService) { }
 
   ngOnInit(): void {
@@ -31,6 +36,21 @@ export class TasksComponent implements OnInit {
         .subscribe(() => {
           this.tasks = this.tasks.filter(tast => tast.id != id)
         })
+  }
+
+  postTask(){
+    this.taskService.post(this.myTask)
+        .subscribe((task) => {
+          this.tasks = [task, ...this.tasks];
+          this.resetTast();
+        })
+  }
+
+  resetTast(){
+    this.myTask = {
+      label: '',
+      completed: false
+    }
   }
 
 }

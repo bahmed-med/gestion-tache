@@ -12,18 +12,17 @@
 <div class="row">
   <div class="rol-md-6 mx-auto">
 
-    <div class="form-group">
+  <div class="form-group">
       <label for="label">Label</label>
-      <input id="label" type="text" class="form-control"></div>
+      <input [(ngModel)] ="myTask.label" id="label" type="text" class="form-control"></div>
   </div>
   <div class="form-check my-2">
     <label class="form-check-label">
-      <input type="checkbox" class="form-check-input" >
+      <input [(ngModel)] ="myTask.completed" type="checkbox" class="form-check-input" >
       completed
     </label>
   </div>
-
-  <button class="btn btn-success btn-block">
+  <button (click)= "postTask()" class="btn btn-success btn-block">
     <i class="fa fa-send"></i>New Task
   </button>
 </div>

@@ -59,3 +59,17 @@ et il faut les ajoute dans la clé import
   il faut créer un model pour les task:
 
 
+pour débuguer une variable dans une template:
+
+  <div class="form-group">
+      <label for="label">Label</label>
+      <input [(ngModel)] ="myTask.label" id="label" type="text" class="form-control"></div>
+  </div>
+  <div class="form-check my-2">
+    <label class="form-check-label">
+      <input [(ngModel)] ="myTask.completed" type="checkbox" class="form-check-input" >
+      completed
+    </label>
+  </div>
+
+{{ myTask | json }}
