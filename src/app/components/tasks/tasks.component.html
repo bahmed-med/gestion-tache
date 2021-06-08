@@ -22,7 +22,11 @@
       completed
     </label>
   </div>
-  <button (click)= "postTask()" class="btn btn-success btn-block">
+  <button *ngIf="editForm" (click)= "updatTask()" class="btn btn-warning btn-block">
+    <i class="fa fa-refresh"></i> Update Task
+  </button>
+
+  <button *ngIf="!editForm" (click)= "postTask()" class="btn btn-success btn-block">
     <i class="fa fa-send"></i>New Task
   </button>
 </div>
@@ -30,7 +34,7 @@
   <div class="col-md">
     <ul class="list-group">
       <li  *ngFor="let task of tasks"  class="list-group-item d-flex justify-content-between align-items-center">
-        <button class="btn btn-sm btn-warning">
+        <button (click)="editTask(task)"  class="btn btn-sm btn-warning">
           <i class="fa fa-pencil"></i>
         </button>
         {{ task.label }}

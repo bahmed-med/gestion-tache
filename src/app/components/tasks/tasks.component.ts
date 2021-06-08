@@ -13,6 +13,7 @@ import { Task } from 'src/app/models/tast';
 })
 export class TasksComponent implements OnInit {
 
+  editForm = false;
   tasks: Task[] = [];
 
   myTask: Task = {
@@ -59,5 +60,19 @@ export class TasksComponent implements OnInit {
           task.completed = !task.completed;
         })
   }
+
+  editTask(task: Task){
+    this.myTask = task;
+    this.editForm = true;
+  }
+
+  updatTask(){
+    this.taskService.update(this.myTask)
+        .subscribe((task => {
+          this.resetTast();
+          this.editForm = false;
+        }))
+  }
+
 
 }
