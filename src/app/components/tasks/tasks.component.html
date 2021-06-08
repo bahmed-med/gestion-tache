@@ -34,7 +34,7 @@
           <i class="fa fa-pencil"></i>
         </button>
         {{ task.label }}
-        <span [ngClass] = "{
+        <span  (click)="toggleCompleted(task)" [ngClass] = "{
           'badge-info' : task.completed,
           'badge-danger' : !task.completed
         }" class="badge badge-secondary badge-pill"   [ngStyle]="{'color':task.completed  ? 'blue' : 'red' }">

@@ -3,7 +3,7 @@
     {
       "id": 1,
       "label": "Learn Angular",
-      "completed": false
+      "completed": true
     },
     {
       "label": "Learn ANONIS",
@@ -12,12 +12,12 @@
     },
     {
       "label": "Learn PHP",
-      "completed": true,
+      "completed": false,
       "id": 3
     },
     {
       "label": "LEARN SYMFONY",
-      "completed": false,
+      "completed": true,
       "id": 4
     }
   ]
