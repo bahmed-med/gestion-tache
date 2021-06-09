@@ -5,7 +5,6 @@ import { Task } from 'src/app/models/tast';
 
 
 
-
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
@@ -13,6 +12,7 @@ import { Task } from 'src/app/models/tast';
 })
 export class TasksComponent implements OnInit {
 
+  showForm = false;
   editForm = false;
   tasks: Task[] = [];
 
@@ -44,6 +44,7 @@ export class TasksComponent implements OnInit {
         .subscribe((task) => {
           this.tasks = [task, ...this.tasks];
           this.resetTast();
+          this.showForm = false;
         })
   }
 
@@ -71,6 +72,7 @@ export class TasksComponent implements OnInit {
         .subscribe((task => {
           this.resetTast();
           this.editForm = false;
+          this.showForm = false;
         }))
   }
 
