@@ -12,9 +12,11 @@ import { Task } from 'src/app/models/tast';
 })
 export class TasksComponent implements OnInit {
 
+  searchText = '';
   showForm = false;
   editForm = false;
   tasks: Task[] = [];
+  resultTasks: Task[]= [];
 
   myTask: Task = {
     label: '',
@@ -29,7 +31,7 @@ export class TasksComponent implements OnInit {
 
   getTasks(){
     this.taskService.findAll()
-      .subscribe(tasks => this.tasks = tasks)
+      .subscribe(tasks => this.resultTasks = this.tasks = tasks)
   }
 
   deleteTask(id:any){
@@ -74,6 +76,10 @@ export class TasksComponent implements OnInit {
           this.editForm = false;
           this.showForm = false;
         }))
+  }
+
+  searchTasks(){
+    this.resultTasks = this.tasks.filter((task) => task.label.toLowerCase().includes(this.searchText.toLowerCase()));
   }
 
 

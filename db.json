@@ -1,11 +1,6 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "label": "Learn Angular zzzz",
-      "completed": true
-    },
-    {
       "label": "Learn ANONIS NANA JEJA",
       "completed": false,
       "id": 2
