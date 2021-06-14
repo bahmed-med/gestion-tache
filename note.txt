@@ -73,3 +73,17 @@ pour débuguer une variable dans une template:
   </div>
 
 {{ myTask | json }}
+
+pour installer REST Client, il faut ajouter le pplugin suivan
+au VSCode: REST Client
+puis, on entregistre un fichier: resquest.http
+
+puis, on execute les requete: GEt, POST....
+
+
+on peux aussi créer une variable avec
+@api = http://localhost:5000/tasks
+
+
+### all tasts
+GET  {{api}}

@@ -1,0 +1,42 @@
+
+@api = http://localhost:5000/tasks
+
+
+### all tasts
+GET  {{api}}
+
+###Persist oen to tast
+POST {{api}}
+Content-Type: application/json
+
+{
+  "label": "Mohamed BAHMED",
+  "completed": false
+}
+
+###get one task
+
+GET {{api}}/tasks/2
+
+
+### update one task
+PUT {{api}}/10
+Content-Type: application/json
+
+{
+
+  "completed": false
+}
+
+
+### patch
+PATCH {{api}}/2
+Content-Type: application/json
+
+{
+  "completed": false
+}
+
+### delete
+
+DELETE {{api}}/2

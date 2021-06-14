@@ -1,11 +1,6 @@
 {
   "tasks": [
     {
-      "label": "Learn ANONIS NANA JEJA",
-      "completed": false,
-      "id": 2
-    },
-    {
       "label": "Learn PHP & SYMFONY",
       "completed": false,
       "id": 3
@@ -29,6 +24,20 @@
       "label": "je suis icihhhh",
       "completed": false,
       "id": 7
+    },
+    {
+      "label": "test avec HTTP",
+      "completed": false,
+      "id": 8
+    },
+    {
+      "label": "test avec HTTP",
+      "completed": false,
+      "id": 9
+    },
+    {
+      "completed": false,
+      "id": 10
     }
   ]
 }
